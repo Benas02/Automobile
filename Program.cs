@@ -10,12 +10,12 @@
 
 // --------------------------------------------------------------------------------------------------------
 
-Auto automobile = new Auto();
+Auto automobile = new Auto("Tesla", "X", Auto.Motore.Elettrico, "Bianco");
 
-automobile.marca = "Tesla";
+/*automobile.marca = "Tesla";
 automobile.modello = "X";
 automobile.tipoMotore = Auto.Motore.Elettrico;
-automobile.colore = "Bianca";
+automobile.colore = "Bianca";*/
 
 automobile.stampaDescrizione();
 
@@ -48,11 +48,10 @@ class Auto {
     /// <summary>
     /// Costruttore della Classe Auto
     /// </summary>
-    /// <param name="marca">Marca dell'Automobile</param>
-    /// <param name="modello">Modello dell'Automobile</param>
+    /// <param name="marca">Marca del Veicolo</param>
+    /// <param name="modello">Modello del Veicolo</param>
     /// <param name="tipoMotore">Tipoliga del Motore</param>
-    /// <param name="colore">Colore dell'Automobile</param>
-    /// <returns>Restituisce le Caratteristiche dell'Automobile</returns>
+    /// <param name="colore">Colore del Veicolo</param>
     public Auto(string? marca, string? modello, Motore tipoMotore, string? colore) {
         this.marca = marca;
         this.modello = modello;
