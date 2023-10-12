@@ -21,6 +21,11 @@ automobile.stampaDescrizione();
 Console.WriteLine();
 
 // ----------------------------------------------------------------------------------------------------------
+
+/// <summary>
+/// Costruisce la descrizione del Veicolo
+/// </summary>
+
 class Auto {
     // ---------- Tipi personalizzati ----------
     public enum Motore {
