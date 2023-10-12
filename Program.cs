@@ -5,9 +5,13 @@
  * - COLORE
  * 
  * All'avvio l'app deve mostrare lo stato dell'Auto, stampando marca, modello, tipo di motore e colore.
- * Per modellare 
+ * Per modellare l'Automobile implementiamo una classe chiamata 'Auto'
 */
 
 class Auto {
-    
+    // Proprietà
+    public string marca;
+    public string modello;
+    public string motore;
+    public string colore;
 }
