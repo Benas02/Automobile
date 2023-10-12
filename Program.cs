@@ -7,7 +7,8 @@
  * All'avvio l'app deve mostrare lo stato dell'Auto, stampando marca, modello, tipo di motore e colore.
  * Per modellare l'Automobile implementiamo una classe chiamata 'Auto'
 */
-// ----------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------------------------------------
 
 Auto automobile = new Auto();
 
@@ -20,28 +21,37 @@ automobile.stampaDescrizione();
 
 Console.WriteLine();
 
-// ----------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------
 
 /// <summary>
 /// Costruisce la descrizione del Veicolo
 /// </summary>
 
 class Auto {
-    // ---------- Tipi personalizzati ----------
+    // -------------------- Tipi personalizzati --------------------
     public enum Motore {
         Benzina,
         Diesel,
         Elettrico
     }
 
-    // ---------- Proprietà ----------
+    // -------------------- Proprietà --------------------
     public string? marca;
     public string? modello;
     public Motore tipoMotore;
     public string? colore;
 
+    // -------------------- Costruttore Vuoto --------------------
     public Auto() {}
 
+    // -------------------- Costruttore Con Parametri --------------------
+    /// <summary>
+    /// Costruttore della Classe Auto
+    /// </summary>
+    /// <param name="marca"></param>
+    /// <param name="modello"></param>
+    /// <param name="tipoMotore"></param>
+    /// <param name="colore"></param>
     public Auto(string? marca, string? modello, Motore tipoMotore, string? colore) {
         this.marca = marca;
         this.modello = modello;
@@ -49,11 +59,12 @@ class Auto {
         this.colore = colore;
     }
 
-    // ---------- Motodo che Stampa le Caratteristiche dell'Auto ----------
+    // -------------------- Motodo che Stampa la Descrizione dell'Auto --------------------
     public void stampaDescrizione() {
         Console.WriteLine(generaDescrizione());
     }
 
+    // -------------------- Motodo che Genera la Descrizione dell'Auto --------------------
     private string generaDescrizione() {
         string result;
 
