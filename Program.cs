@@ -48,10 +48,11 @@ class Auto {
     /// <summary>
     /// Costruttore della Classe Auto
     /// </summary>
-    /// <param name="marca"></param>
-    /// <param name="modello"></param>
-    /// <param name="tipoMotore"></param>
-    /// <param name="colore"></param>
+    /// <param name="marca">Marca dell'Automobile</param>
+    /// <param name="modello">Modello dell'Automobile</param>
+    /// <param name="tipoMotore">Tipoliga del Motore</param>
+    /// <param name="colore">Colore dell'Automobile</param>
+    /// <returns>Restituisce le Caratteristiche dell'Automobile</returns>
     public Auto(string? marca, string? modello, Motore tipoMotore, string? colore) {
         this.marca = marca;
         this.modello = modello;
