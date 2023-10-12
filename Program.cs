@@ -22,21 +22,18 @@ automobile.colore = "Bianca";*/
 automobile.stampaDescrizione();
 automobile.stampaStato();
 
+Console.WriteLine("\n---------------------------------");
+
 automobile.accendi();
 Console.WriteLine("\n- Tento di Accendere il Veicolo");
 automobile.stampaStato();
+
+Console.WriteLine("\n---------------------------------");
 
 automobile.spegni();
 Console.WriteLine("\n- Spengo il Veicolo");
 automobile.stampaStato();
 
-Console.WriteLine();
-
-// --------------------------------------------------------------------------------------------------------
-
-/// <summary>
-/// Costruisce la descrizione del Veicolo
-/// </summary>
-
+Console.WriteLine("\n---------------------------------\n");
 
 // --------------------------------------------------------------------------------------------------------

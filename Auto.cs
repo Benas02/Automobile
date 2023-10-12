@@ -8,8 +8,7 @@ namespace prima_app
 {
     class Auto {
         // -------------------- Tipi personalizzati --------------------
-        public enum Motore
-        {
+        public enum Motore {
             Benzina,
             Diesel,
             Elettrico
@@ -27,8 +26,7 @@ namespace prima_app
         public Auto() { }
 
         // -------------------- Costruttore Con Parametri --------------------
-        public Auto(string? marca, string? modello, Motore tipoMotore, string? colore, int livelloCarburante)
-        {
+        public Auto(string? marca, string? modello, Motore tipoMotore, string? colore, int livelloCarburante) {
             this.marca = marca;
             this.modello = modello;
             this.tipoMotore = tipoMotore;
@@ -37,32 +35,25 @@ namespace prima_app
         }
 
         // -------------------- Motodo che Accende l'Auto --------------------
-        public void accendi()
-        {
-            if (this.livelloCarburante > 0)
-            {
+        public void accendi() {
+            if (this.livelloCarburante > 0) {
                 this.accesa = true;
-            }
-            else
-            {
+            } else {
                 this.accesa = false;
             }
         }
 
         // -------------------- Motodo che Spegne l'Auto --------------------
-        public void spegni()
-        {
+        public void spegni() {
             this.accesa = false;
         }
 
         // -------------------- Motodo che Stampa la Descrizione dell'Auto --------------------
-        public void stampaDescrizione()
-        {
+        public void stampaDescrizione() {
             Console.WriteLine(generaDescrizione());
         }
 
-        private string generaDescrizione()
-        {
+        private string generaDescrizione() {
             string result;
 
             result = "Marca: " + this.marca + "\n";
@@ -74,23 +65,18 @@ namespace prima_app
         }
 
         // -------------------- Motodo che Stampa lo Stato dell'Auto --------------------
-        public void stampaStato()
-        {
+        public void stampaStato() {
             Console.WriteLine(generaStato());
         }
 
-        private string generaStato()
-        {
+        private string generaStato() {
             string result;
 
             result = "Livello Carburante: " + this.livelloCarburante + " l\n";
 
-            if (this.accesa == true)
-            {
+            if (this.accesa == true) {
                 result += "Stato Veicolo: Veicolo ACCESO";
-            }
-            else
-            {
+            } else {
                 result += "Stato Veicolo: Veicolo SPENTO";
             }
 
