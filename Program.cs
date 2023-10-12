@@ -16,7 +16,9 @@ automobile.modello = "X";
 automobile.tipoMotore = Auto.Motore.Elettrico;
 automobile.colore = "Bianca";
 
-automobile.stampa();
+automobile.stampaDescrizione();
+
+Console.WriteLine();
 
 // ----------------------------------------------------------------------------------------------------------
 class Auto {
@@ -43,10 +45,18 @@ class Auto {
     }
 
     // ---------- Motodo che Stampa le Caratteristiche dell'Auto ----------
-    public void stampa() {
-        Console.WriteLine("Marca: " + this.marca);
-        Console.WriteLine("Modello: " + this.modello);
-        Console.WriteLine("Tipo Motore: " + this.tipoMotore);
-        Console.WriteLine("Colore: " + this.colore);
+    public void stampaDescrizione() {
+        Console.WriteLine(generaDescrizione());
+    }
+
+    private string generaDescrizione() {
+        string result;
+
+        result = "Marca: " + this.marca;
+        result += $"\nModello: {this.modello}";
+        result += "\nTipo Motore: " + this.tipoMotore;
+        result += $"\nColore: {this.colore}";
+
+        return result;
     }
 }
