@@ -14,11 +14,6 @@ using prima_app;
 
 Auto automobile = new Auto("Tesla", "X", Auto.Motore.Elettrico, "Bianco", 50);
 
-/*automobile.marca = "Tesla";
-automobile.modello = "X";
-automobile.tipoMotore = Auto.Motore.Elettrico;
-automobile.colore = "Bianca";*/
-
 automobile.stampaDescrizione();
 automobile.stampaStato();
 

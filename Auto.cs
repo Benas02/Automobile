@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace prima_app
 {
     class Auto {
+        #region "Proprietà"
         // -------------------- Tipi personalizzati --------------------
         public enum Motore {
             Benzina,
@@ -21,7 +22,9 @@ namespace prima_app
         public string? colore;
         public int livelloCarburante;
         private bool accesa;
+        #endregion
 
+        #region "Costruttore"
         // -------------------- Costruttore Vuoto --------------------
         public Auto() { }
 
@@ -33,7 +36,9 @@ namespace prima_app
             this.colore = colore;
             this.livelloCarburante = livelloCarburante;
         }
+        #endregion
 
+        #region "Accendi - Spegni"
         // -------------------- Motodo che Accende l'Auto --------------------
         public void accendi() {
             if (this.livelloCarburante > 0) {
@@ -47,7 +52,9 @@ namespace prima_app
         public void spegni() {
             this.accesa = false;
         }
+        #endregion
 
+        #region "Stampa Descrizione"
         // -------------------- Motodo che Stampa la Descrizione dell'Auto --------------------
         public void stampaDescrizione() {
             Console.WriteLine(generaDescrizione());
@@ -63,7 +70,9 @@ namespace prima_app
 
             return result;
         }
+        #endregion
 
+        #region "Stampa Stato"
         // -------------------- Motodo che Stampa lo Stato dell'Auto --------------------
         public void stampaStato() {
             Console.WriteLine(generaStato());
@@ -82,6 +91,7 @@ namespace prima_app
 
             return result;
         }
+        #endregion
     }
 
 }
