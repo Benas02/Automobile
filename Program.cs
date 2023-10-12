@@ -18,8 +18,6 @@ automobile.colore = "Bianca";
 
 automobile.stampa();
 
-//Console.ReadLine();
-
 // ----------------------------------------------------------------------------------------------------------
 class Auto {
     // ---------- Tipi personalizzati ----------
