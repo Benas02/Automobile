@@ -52,10 +52,10 @@ class Auto {
     private string generaDescrizione() {
         string result;
 
-        result = "Marca: " + this.marca;
-        result += $"\nModello: {this.modello}";
-        result += "\nTipo Motore: " + this.tipoMotore;
-        result += $"\nColore: {this.colore}";
+        result = "Marca: " + this.marca + "\n";
+        result += $"Modello: {this.modello}\n";
+        result += "Tipo Motore: " + this.tipoMotore + "\n";
+        result += $"Colore: {this.colore}";
 
         return result;
     }
