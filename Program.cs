@@ -18,12 +18,11 @@
 
 using prima_app;
 
-Auto automobile = new Auto("Tesla", "X", Auto.Motore.Elettrico, "Bianco", 0);
+//Auto automobile = new Auto("Tesla", "X", Auto.Motore.Elettrico, "Bianco", 0);
+AutoInterattiva automobile = new AutoInterattiva("Tesla", "X", Auto.Motore.Elettrico, "Bianco", 0);
 
 automobile.stampaDescrizione();
-automobile.stampaStato();
-
-Console.WriteLine("\n---------------------------------");
+automobile.stampaStatoNoStato();
 
 automobile.setScelta();
 
