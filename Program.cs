@@ -6,28 +6,28 @@
  * 
  * All'avvio l'app deve mostrare lo stato dell'Auto, stampando marca, modello, tipo di motore e colore.
  * Per modellare l'Automobile implementiamo una classe chiamata 'Auto'
+ * 
+ * Aggiungere all'applicazione un menu che consenta all'autore di selezionare l'operazione da fare:
+ * 1) ACCENDI
+ * 2) SPEGNI
+ * 3) RIFORNISCI
+ * 0) ESCI
 */
 
 // --------------------------------------------------------------------------------------------------------
 
 using prima_app;
 
-Auto automobile = new Auto("Tesla", "X", Auto.Motore.Elettrico, "Bianco", 50);
+Auto automobile = new Auto("Tesla", "X", Auto.Motore.Elettrico, "Bianco", 0);
 
 automobile.stampaDescrizione();
 automobile.stampaStato();
 
 Console.WriteLine("\n---------------------------------");
 
-automobile.accendi();
-Console.WriteLine("\n- Tento di Accendere il Veicolo");
-automobile.stampaStato();
+automobile.setScelta();
 
-Console.WriteLine("\n---------------------------------");
-
-automobile.spegni();
-Console.WriteLine("\n- Spengo il Veicolo");
-automobile.stampaStato();
+// --------------------------------------------------------------------------------------------------------
 
 Console.WriteLine("\n---------------------------------\n");
 
