@@ -21,21 +21,29 @@ namespace prima_app
         public string? modello;
         public Motore tipoMotore;
         public string? colore;
+
+        private int livelloMaxCarburante;
         public int livelloCarburante;
         private bool accesa;
         #endregion
 
         #region "Costruttore"
         // -------------------- Costruttore Vuoto --------------------
-        public Auto() { }
+        public Auto() {
+            this.marca = "Tesla";
+            this.modello = "X";
+            this.tipoMotore = Auto.Motore.Elettrico;
+            this.colore = "Bianco";
+            this.livelloCarburante = 10;
+            this.livelloMaxCarburante = 100;
+        }
 
         // -------------------- Costruttore Con Parametri --------------------
-        public Auto(string? marca, string? modello, Motore tipoMotore, string? colore, int livelloCarburante) {
+        public Auto(string? marca, string? modello, Motore tipoMotore, string? colore) {
             this.marca = marca;
             this.modello = modello;
-            this.tipoMotore = tipoMotore;
             this.colore = colore;
-            this.livelloCarburante = livelloCarburante;
+            this.tipoMotore = tipoMotore;
         }
         #endregion
 
@@ -55,8 +63,15 @@ namespace prima_app
         }
 
         // -------------------- Motodo che Rifornisce l'Auto --------------------
-        public void rifornisci(int livelloCarburante) {
-            this.livelloCarburante = livelloCarburante;
+        public void rifornisci(int carburante) {
+            if (carburante > 0) {
+                this.livelloCarburante += carburante;  
+
+                if(this.livelloCarburante > this.livelloMaxCarburante) {
+                    this.livelloCarburante = this.livelloMaxCarburante;
+                }
+            }
+            
         }
 
         #endregion

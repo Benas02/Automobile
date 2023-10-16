@@ -11,8 +11,6 @@ namespace prima_app
         // -------------------- Costruttore Vuoto --------------------
         public AutoInterattiva() { }
 
-        public AutoInterattiva(string? marca, string? modello, Motore tipoMotore, string? colore, int livelloCarburante) : base(marca, modello, tipoMotore, colore, livelloCarburante) { }
-
         #endregion
 
         #region "Menu"
@@ -59,7 +57,7 @@ namespace prima_app
                         int livelloCarburante;
 
                         do {
-                            Console.Write("Livello Rifornimento: ");
+                            Console.Write("Quanto Rifornimento vuoi fare: ");
                             livelloCarburante = Int32.Parse(Console.ReadLine());
                         } while (livelloCarburante < 0);
 

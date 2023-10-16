@@ -19,7 +19,7 @@
 using prima_app;
 
 //Auto automobile = new Auto("Tesla", "X", Auto.Motore.Elettrico, "Bianco", 0);
-AutoInterattiva automobile = new AutoInterattiva("Tesla", "X", Auto.Motore.Elettrico, "Bianco", 0);
+AutoInterattiva automobile = new AutoInterattiva();
 
 automobile.stampaDescrizione();
 automobile.stampaStatoNoStato();
