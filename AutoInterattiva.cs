@@ -53,15 +53,8 @@ namespace prima_app
                         Console.WriteLine("\n- Spengo il Veicolo");
                         this.stampaStato();
                         break;
-                    case 3:
-                        int livelloCarburante;
-
-                        do {
-                            Console.Write("Quanto Rifornimento vuoi fare: ");
-                            livelloCarburante = Int32.Parse(Console.ReadLine());
-                        } while (livelloCarburante < 0);
-
-                        this.rifornisci(livelloCarburante);
+                    case 3:                       
+                        this.rifornisci(this.chiediCarburante());
                         Console.WriteLine("\n- Rifornisco il Veicolo");
                         this.stampaStatoNoStato();
                         break;
@@ -73,6 +66,21 @@ namespace prima_app
                         break;
                 }
             } while (menu != 0);
+        }
+        #endregion
+
+        #region "Chiedi Carburante"
+        // -------------------- Motodo che Chiede il Carburante --------------------
+        private int chiediCarburante() {
+            int livelloCarburante;
+
+            do
+            {
+                Console.Write("Quanto Rifornimento vuoi fare: ");
+                livelloCarburante = Int32.Parse(Console.ReadLine());
+            } while (livelloCarburante < 0);
+
+            return livelloCarburante;
         }
         #endregion
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace prima_app
 {
-    class Auto {
+    public class Auto {
         #region "Proprietà"
         // -------------------- Tipi personalizzati --------------------
         public enum Motore {
@@ -45,6 +45,13 @@ namespace prima_app
             this.colore = colore;
             this.tipoMotore = tipoMotore;
         }
+
+        public Auto(string? marca, string? modello, Motore tipoMotore, string? colore, int livelloMaxCarburante, int livelloCarburante) : this(marca, modello, tipoMotore, colore) {
+            this.livelloMaxCarburante = livelloMaxCarburante;
+            this.livelloCarburante = livelloCarburante;
+        }
+
+
         #endregion
 
         #region "Accendi - Spegni - Rifornimento"
@@ -100,7 +107,7 @@ namespace prima_app
             Console.WriteLine(generaStato());
         }
 
-        private string generaStato() {
+        public string generaStato() {
             string result;
 
             result = "Livello Carburante: " + this.livelloCarburante + " l\n";
