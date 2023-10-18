@@ -66,7 +66,7 @@ namespace prima_app
                         if (this.isAccesa() == true) {
                             this.accelera(this.chiediAccelerazione());
                             Console.WriteLine("\n- Accelero il Veicolo");
-                            this.stampaStatoVel();
+                            this.stampaStatoNoStato();
                         } else {
                             Console.WriteLine("Veicolo SPENTO, Accenderlo per Accelerare");
                         } 
@@ -75,7 +75,7 @@ namespace prima_app
                         if (this.isAccesa() == true) {
                             this.decelera(this.chiediDecelerazione());
                             Console.WriteLine("\n- Decelero il Veicolo");
-                            this.stampaStatoVel();
+                            this.stampaStatoNoStato();
                         }
                         else {
                             Console.WriteLine("Veicolo SPENTO, Accenderlo per Decelerare");

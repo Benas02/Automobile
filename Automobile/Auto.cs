@@ -88,7 +88,7 @@ namespace prima_app
                 this.accesa = false;
             } else {
                 this.accesa = true;
-                Console.WriteLine("Per spegnere il veicolo rallentare molto completamente");
+                Console.WriteLine("Per SPEGNERE il Veicolo RALLENTARE Molto Completamente");
             }            
         }
 
@@ -171,7 +171,8 @@ namespace prima_app
         public string generaStato() {
             string result;
 
-            result = "Livello Carburante: " + this.livelloCarburante + " l\n";
+            result = "Livello Carburante: " + this.livelloCarburante + " l\n" +
+                     "Velocità: " + this.livelloVelocita + " km/h\n";
 
             if (this.accesa == true) {
                 result += "Stato Veicolo: ACCESO";
@@ -191,7 +192,8 @@ namespace prima_app
         private string generaStatoNoStato()
         {
             string result;
-            result = "Livello Carburante: " + this.livelloCarburante + " l\n";
+            result = "Livello Carburante: " + this.livelloCarburante + " l\n" +
+                     "Velocità: " + this.livelloVelocita + " km/h";
             return result;
         }
         #endregion
