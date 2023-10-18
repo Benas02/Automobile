@@ -62,6 +62,11 @@ namespace prima_app
             this.livelloVelocita = livelloVelocita;
         }
 
+        // -------------------- Get Accesa --------------------
+        public bool isAccesa()
+        {
+            return this.accesa; 
+        }
         #endregion
 
         #region "Accendi - Spegni - Rifornimento"
@@ -96,15 +101,14 @@ namespace prima_app
         #region "Accelera - Decelera"
         // -------------------- Motodo che Accelera l'Auto --------------------
         public void accelera(int value) {
-            if(value > 0) {
-                this.accesa = true;
+            if (value > 0) {
                 this.livelloVelocita += value;
 
-                if (this.livelloVelocita > this.livelloMaxVelocita) {
+                if (this.livelloVelocita > this.livelloMaxVelocita)
+                {
                     this.livelloVelocita = this.livelloMaxVelocita;
                 }
-            }
-            
+            }           
         }
         #endregion
 
