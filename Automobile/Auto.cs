@@ -200,6 +200,36 @@ namespace prima_app
         }
         #endregion
 
+        #region "Stampa Stato Automobile"
+        // -------------------- Motodo che Stampa la Descrizione dell'Auto --------------------
+        public void stampaStatoAutomobile()
+        {
+            Console.WriteLine(generaStatoAutomobile());
+        }
+
+        private string generaStatoAutomobile()
+        {
+            string result;
+
+            result = "\nMarca: " + this.marca + "\n";
+            result += $"Modello: {this.modello}\n";
+            result += $"Colore: {this.colore}\n";
+            result += "Tipo Motore: " + this.tipoMotore + "\n";
+            result += "Livello Carburante: " + this.livelloCarburante + " l\n";
+            result += "Velocità: " + this.livelloVelocita + " km/h\n";
+
+            if (this.accesa == true)
+            {
+                result += "Stato Veicolo: ACCESO";
+            }
+            else
+            {
+                result += "Stato Veicolo: SPENTO";
+            }
+
+            return result;
+        }
+        #endregion
     }
 
 }
