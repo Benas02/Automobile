@@ -25,6 +25,10 @@ namespace prima_app
         private int livelloMaxCarburante;
         public int livelloCarburante;
         private bool accesa;
+
+        private int livelloMaxVelocita;
+        public int livelloVelocita;
+        private bool accelera;
         #endregion
 
         #region "Costruttore"
@@ -36,6 +40,8 @@ namespace prima_app
             this.colore = "Bianco";
             this.livelloCarburante = 10;
             this.livelloMaxCarburante = 100;
+            this.livelloVelocita = 0;
+            this.livelloMaxVelocita = 250;
         }
 
         // -------------------- Costruttore Con Parametri --------------------
@@ -50,6 +56,8 @@ namespace prima_app
             this.livelloMaxCarburante = livelloMaxCarburante;
             this.livelloCarburante = livelloCarburante;
         }
+
+
 
 
         #endregion
