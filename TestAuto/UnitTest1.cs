@@ -36,5 +36,26 @@ namespace TestAuto
             }
         }
         #endregion
+
+        #region "Test Accelera e Decelera"
+        // --------------------------------------------------------------------------------------------------------
+        [TestMethod]
+        public void testAccelera()
+        {
+            prima_app.Auto automobile = new prima_app.Auto("", "", prima_app.Auto.Motore.Elettrico, "", 100, 100, 0, 250);
+
+            automobile.accelera(10);
+
+            if (automobile.generaStato() == "Livello Carburante: 90 l\n" +
+                     "Velocità: 10 km/h\nStato Veicolo: ACCESO")
+            {
+                // OK
+            }
+            else
+            {
+                throw new Exception("");
+            }
+        }
+        #endregion
     }
 }

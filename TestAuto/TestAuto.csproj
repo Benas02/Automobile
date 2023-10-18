@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Automobile\Automobile.csproj" />
-    <ProjectReference Include="..\prima-app\prima-app.csproj" />
   </ItemGroup>
 
 </Project>
