@@ -96,7 +96,8 @@ namespace prima_app
         #region "Accelera - Decelera"
         // -------------------- Motodo che Accelera l'Auto --------------------
         public void accelera(int value) {
-            if(value > 0 && this.accesa == true) {
+            if(value > 0) {
+                this.accesa = true;
                 this.livelloVelocita += value;
 
                 if (this.livelloVelocita > this.livelloMaxVelocita) {
@@ -135,7 +136,7 @@ namespace prima_app
             string result;
 
             result = "Livello Carburante: " + this.livelloCarburante + " l\n" +
-                     "Velocità: " + this.livelloVelocita + "km/h";
+                     "Velocità: " + this.livelloVelocita + " km/h";
 
             if (this.accesa == true) {
                 result += "Stato Veicolo: Veicolo ACCESO";
@@ -155,8 +156,8 @@ namespace prima_app
         private string generaStatoNoStato()
         {
             string result;
-            result = "Livello Carburante: " + this.livelloCarburante + " l" +
-                     "Velocità: " + this.livelloVelocita + "km/h";
+            result = "Livello Carburante: " + this.livelloCarburante + " l\n" +
+                     "Velocità: " + this.livelloVelocita + " km/h";
             return result;
         }
         #endregion

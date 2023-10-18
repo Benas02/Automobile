@@ -64,7 +64,7 @@ namespace prima_app
                     case 4:
                         this.accelera(this.chiediAccelerazione());
                         Console.WriteLine("\n- Accelero il Veicolo");
-                        this.stampaStatoNoStato();
+                        this.stampaStato();
                         break;
                     case 5:
                         //this.(this.chiediCarburante());
