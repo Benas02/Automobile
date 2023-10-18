@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace prima_app
 {
@@ -25,9 +26,9 @@ namespace prima_app
         private int livelloMaxCarburante;
         public int livelloCarburante;
         private bool accesa;
-
+        
+        public int livelloVelocita { get; private set; }
         private int livelloMaxVelocita;
-        public int livelloVelocita;
         #endregion
 
         #region "Costruttore"
@@ -102,12 +103,17 @@ namespace prima_app
         // -------------------- Motodo che Accelera l'Auto --------------------
         public void accelera(int value) {
             if (value > 0) {
-                this.livelloVelocita += value;
+                if(this.livelloCarburante <= value){
+                    Console.WriteLine("Bisogna fare RIFORNIMENTO");
+                } else {
+                    this.livelloVelocita += value;
+                    this.livelloCarburante -= value;
 
-                if (this.livelloVelocita > this.livelloMaxVelocita)
-                {
-                    this.livelloVelocita = this.livelloMaxVelocita;
-                }
+                    if (this.livelloVelocita > this.livelloMaxVelocita)
+                    {
+                        this.livelloVelocita = this.livelloMaxVelocita;
+                    }
+                }                
             }           
         }
 
