@@ -76,7 +76,7 @@ namespace prima_app
 
             do
             {
-                Console.Write("Quanto Rifornimento vuoi fare: ");
+                Console.Write("Quanto Rifornimento vuoi aggiungere: ");
                 livelloCarburante = Int32.Parse(Console.ReadLine());
             } while (livelloCarburante < 0);
 
