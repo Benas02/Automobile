@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -81,7 +82,12 @@ namespace prima_app
 
         // -------------------- Motodo che Spegne l'Auto --------------------
         public void spegni() {
-            this.accesa = false;
+            if (this.livelloVelocita == 0)  {
+                this.accesa = false;
+            } else {
+                this.accesa = true;
+                Console.WriteLine("Per spegnere il veicolo rallentare molto completamente");
+            }            
         }
 
         // -------------------- Motodo che Rifornisce l'Auto --------------------
