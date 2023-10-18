@@ -111,35 +111,18 @@ namespace prima_app
             }           
         }
 
-        public void rallenta(int value)
-        {
-            string result;
-
-            if (value > 0)
-            {
-
-                if (accesa == true)
-                {
+        public void decelera(int value) {
+            if (value > 0) {
+                if (this.accesa == true) {
                     Console.WriteLine("Accendere la macchina");
 
-                    if (livelloVelocita > 0)
-                    {
+                    if (this.livelloVelocita > 0) {
                         this.livelloVelocita -= value;
 
-                        if (livelloVelocita < 0)
-                        {
+                        if (this.livelloVelocita < 0) {
                             this.livelloVelocita = 0;
                         }
-
-                    }
-                    else
-                    {
-                        Console.WriteLine("Pronto per franare");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Macchina spenta");
+                    } 
                 }
 
             }
@@ -166,7 +149,7 @@ namespace prima_app
         }
         #endregion
 
-        #region "Stampa Stato"
+        #region "Stampa Stato Carburante"
         // -------------------- Motodo che Stampa lo Stato dell'Auto --------------------
         public void stampaStato() {
             Console.WriteLine(generaStato());
@@ -175,13 +158,12 @@ namespace prima_app
         public string generaStato() {
             string result;
 
-            result = "Livello Carburante: " + this.livelloCarburante + " l\n" +
-                     "Velocità: " + this.livelloVelocita + " km/h";
+            result = "Livello Carburante: " + this.livelloCarburante + " l\n";
 
             if (this.accesa == true) {
-                result += "Stato Veicolo: Veicolo ACCESO";
+                result += "Stato Veicolo: ACCESO";
             } else {
-                result += "Stato Veicolo: Veicolo SPENTO";
+                result += "Stato Veicolo: SPENTO";
             }
 
             return result;
@@ -196,8 +178,24 @@ namespace prima_app
         private string generaStatoNoStato()
         {
             string result;
-            result = "Livello Carburante: " + this.livelloCarburante + " l\n" +
-                     "Velocità: " + this.livelloVelocita + " km/h";
+            result = "Livello Carburante: " + this.livelloCarburante + " l\n";
+            return result;
+        }
+        #endregion
+
+        #region "Stampa Stato Velocità"
+        // -------------------- Motodo che Stampa lo Stato dell'Auto --------------------
+        public void stampaStatoVel()
+        {
+            Console.WriteLine(generaStatoVel());
+        }
+
+        public string generaStatoVel()
+        {
+            string result;
+
+            result = "Velocità: " + this.livelloVelocita + " km/h";
+
             return result;
         }
         #endregion

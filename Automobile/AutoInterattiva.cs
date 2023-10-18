@@ -24,8 +24,8 @@ namespace prima_app
             Console.WriteLine("\n1) ACCENDERE il Veicolo");
             Console.WriteLine("2) SPEGNERE il Veicolo");
             Console.WriteLine("3) RIFORNIRE il Veicolo");
-            Console.WriteLine("4) ACCELERA il Veicolo");
-            Console.WriteLine("5) RALLENTA il Veicolo");
+            Console.WriteLine("4) ACCELERARE il Veicolo");
+            Console.WriteLine("5) RALLENTARE il Veicolo");
 
             Console.WriteLine("0) USCIRE");
 
@@ -65,20 +65,20 @@ namespace prima_app
                         if (this.isAccesa() == true) {
                             this.accelera(this.chiediAccelerazione());
                             Console.WriteLine("\n- Accelero il Veicolo");
-                            this.stampaStato();
+                            this.stampaStatoVel();
                         } else {
                             Console.WriteLine("Veicolo SPENTO, Accenderlo per Accelerare");
                         } 
                         break;
                     case 5:
-                        /*if (this.isAccesa() == true) {
+                        if (this.isAccesa() == true) {
                             this.decelera(this.chiediDecelerazione());
                             Console.WriteLine("\n- Decelero il Veicolo");
-                            this.stampaStato();
+                            this.stampaStatoVel();
                         }
                         else {
                             Console.WriteLine("Veicolo SPENTO, Accenderlo per Decelerare");
-                        }*/
+                        }
                         break;
                     case 0:
                         //Environment.Exit(0);              // CHIUDE IL PROGRAMMA
