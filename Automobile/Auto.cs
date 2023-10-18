@@ -189,7 +189,7 @@ namespace prima_app
             Console.WriteLine(generaStatoNoStato());
         }
 
-        private string generaStatoNoStato()
+        public string generaStatoNoStato()
         {
             string result;
             result = "Livello Carburante: " + this.livelloCarburante + " l\n" +
