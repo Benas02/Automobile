@@ -28,7 +28,6 @@ namespace prima_app
 
         private int livelloMaxVelocita;
         public int livelloVelocita;
-        private bool accelera;
         #endregion
 
         #region "Costruttore"
@@ -57,8 +56,11 @@ namespace prima_app
             this.livelloCarburante = livelloCarburante;
         }
 
+        public Auto(string? marca, string? modello, Motore tipoMotore, string? colore, int livelloMaxCarburante, int livelloCarburante, int livelloVelocita, int livelloMaxVelocita) : this(marca, modello, tipoMotore, colore, livelloMaxCarburante, livelloCarburante) {
 
-
+            this.livelloMaxVelocita = livelloMaxVelocita;
+            this.livelloVelocita = livelloVelocita;
+        }
 
         #endregion
 
@@ -125,6 +127,21 @@ namespace prima_app
 
         #endregion
 
+        #region "Accelera - Decelera"
+        // -------------------- Motodo che Accelera l'Auto --------------------
+        public void accelera(int value) {
+            if(value > 0) {
+                this.accesa = true;
+                this.livelloVelocita += value;
+
+                if (this.livelloVelocita > this.livelloMaxVelocita) {
+                    this.livelloVelocita = this.livelloMaxVelocita;
+                }
+            }
+            
+        }
+        #endregion
+
         #region "Stampa Descrizione"
         // -------------------- Motodo che Stampa la Descrizione dell'Auto --------------------
         public void stampaDescrizione() {
@@ -152,7 +169,8 @@ namespace prima_app
         public string generaStato() {
             string result;
 
-            result = "Livello Carburante: " + this.livelloCarburante + " l\n";
+            result = "Livello Carburante: " + this.livelloCarburante + " l\n" +
+                     "Velocità: " + this.livelloVelocita + " km/h";
 
             if (this.accesa == true) {
                 result += "Stato Veicolo: Veicolo ACCESO";
@@ -172,7 +190,8 @@ namespace prima_app
         private string generaStatoNoStato()
         {
             string result;
-            result = "Livello Carburante: " + this.livelloCarburante + " l";
+            result = "Livello Carburante: " + this.livelloCarburante + " l\n" +
+                     "Velocità: " + this.livelloVelocita + " km/h";
             return result;
         }
         #endregion
