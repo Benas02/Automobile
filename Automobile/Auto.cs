@@ -91,11 +91,28 @@ namespace prima_app
             
         }
 
-        public void rallenta(int value) {
+        #endregion
+
+        #region "Accelera - Decelera"
+        // -------------------- Motodo che Accelera l'Auto --------------------
+        public void accelera(int value) {
+            if(value > 0) {
+                this.accesa = true;
+                this.livelloVelocita += value;
+
+                if (this.livelloVelocita > this.livelloMaxVelocita) {
+                    this.livelloVelocita = this.livelloMaxVelocita;
+                }
+            }
+            
+        }
+
+        public void rallenta(int value)
+        {
             string result;
 
-            if (value > 0) {
-                //this.livelloVelocita -= value;
+            if (value > 0)
+            {
 
                 if (accesa == true)
                 {
@@ -117,29 +134,14 @@ namespace prima_app
                     }
                 }
                 else
-                    {
-                    Console.WriteLine("Macchina spenta"); 
-                    }
-                
-            }
-            
-        }
-
-        #endregion
-
-        #region "Accelera - Decelera"
-        // -------------------- Motodo che Accelera l'Auto --------------------
-        public void accelera(int value) {
-            if(value > 0) {
-                this.accesa = true;
-                this.livelloVelocita += value;
-
-                if (this.livelloVelocita > this.livelloMaxVelocita) {
-                    this.livelloVelocita = this.livelloMaxVelocita;
+                {
+                    Console.WriteLine("Macchina spenta");
                 }
+
             }
-            
+
         }
+
         #endregion
 
         #region "Stampa Descrizione"
