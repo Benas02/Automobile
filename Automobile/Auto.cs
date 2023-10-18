@@ -74,8 +74,9 @@ namespace prima_app
         #region "Accendi - Spegni - Rifornimento"
         // -------------------- Motodo che Accende l'Auto --------------------
         public void accendi() {
-            if (this.livelloCarburante > 0) {
+            if (this.livelloCarburante > 2) {
                 this.accesa = true;
+                this.livelloCarburante -= 1;
             } else {
                 this.accesa = false;
             }
