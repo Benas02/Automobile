@@ -22,7 +22,6 @@ using prima_app;
 AutoInterattiva automobile = new AutoInterattiva();
 
 automobile.stampaDescrizione();
-automobile.stampaStatoNoStato();
 
 automobile.setScelta();
 

@@ -128,7 +128,6 @@ namespace prima_app
             }
 
         }
-
         #endregion
 
         #region "Stampa Descrizione"
@@ -143,7 +142,8 @@ namespace prima_app
             result = "Marca: " + this.marca + "\n";
             result += $"Modello: {this.modello}\n";
             result += $"Colore: {this.colore}\n";
-            result += "Tipo Motore: " + this.tipoMotore;
+            result += "Tipo Motore: " + this.tipoMotore + "\n";
+            result += "Livello Carburante: " + this.livelloCarburante;
 
             return result;
         }
