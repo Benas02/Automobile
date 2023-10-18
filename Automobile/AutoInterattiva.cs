@@ -24,13 +24,16 @@ namespace prima_app
             Console.WriteLine("\n1) ACCENDERE il Veicolo");
             Console.WriteLine("2) SPEGNERE il Veicolo");
             Console.WriteLine("3) RIFORNIRE il Veicolo");
+            Console.WriteLine("4) ACCELERA il Veicolo");
+            Console.WriteLine("5) RALLENTA il Veicolo");
+
             Console.WriteLine("0) USCIRE");
 
             do
             {
                 Console.Write("\nSelezionare l'Azione da Eseguire: ");
                 answer = Int32.Parse(Console.ReadLine());
-            } while (answer < 0 || answer > 3);
+            } while (answer < 0 || answer > 5);
 
             return answer;
         }
@@ -58,6 +61,16 @@ namespace prima_app
                         Console.WriteLine("\n- Rifornisco il Veicolo");
                         this.stampaStatoNoStato();
                         break;
+                    case 4:
+                        this.accelera(this.chiediAccelerazione());
+                        Console.WriteLine("\n- Accelero il Veicolo");
+                        this.stampaStatoNoStato();
+                        break;
+                    case 5:
+                        //this.(this.chiediCarburante());
+                        //Console.WriteLine("\n- Rifornisco il Veicolo");
+                        //this.stampaStatoNoStato();
+                        break;
                     case 0:
                         //Environment.Exit(0);              // CHIUDE IL PROGRAMMA
                         break;
@@ -81,6 +94,38 @@ namespace prima_app
             } while (livelloCarburante < 0);
 
             return livelloCarburante;
+        }
+        #endregion
+
+        #region "Chiedi Accelerazione"
+        // -------------------- Motodo che Chiede l'Accelerazione --------------------
+        private int chiediAccelerazione()
+        {
+            int livelloAccelera;
+
+            do
+            {
+                Console.Write("Quanto vuoi Accelerare: ");
+                livelloAccelera = Int32.Parse(Console.ReadLine());
+            } while (livelloAccelera < 0);
+
+            return livelloAccelera;
+        }
+        #endregion
+
+        #region "Chiedi Decelerazione"
+        // -------------------- Motodo che Chiede la Decelerazione --------------------
+        private int chiediDecelerazione()
+        {
+            int livelloDecelerazione;
+
+            do
+            {
+                Console.Write("Quanto vuoi Deceleare: ");
+                livelloDecelerazione = Int32.Parse(Console.ReadLine());
+            } while (livelloDecelerazione < 0);
+
+            return livelloDecelerazione;
         }
         #endregion
     }

@@ -28,7 +28,6 @@ namespace prima_app
 
         private int livelloMaxVelocita;
         public int livelloVelocita;
-        private bool accelera;
         #endregion
 
         #region "Costruttore"
@@ -57,8 +56,11 @@ namespace prima_app
             this.livelloCarburante = livelloCarburante;
         }
 
+        public Auto(string? marca, string? modello, Motore tipoMotore, string? colore, int livelloMaxCarburante, int livelloCarburante, int livelloVelocita, int livelloMaxVelocita) : this(marca, modello, tipoMotore, colore, livelloMaxCarburante, livelloCarburante) {
 
-
+            this.livelloMaxVelocita = livelloMaxVelocita;
+            this.livelloVelocita = livelloVelocita;
+        }
 
         #endregion
 
