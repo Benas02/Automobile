@@ -2,9 +2,7 @@ namespace TestAuto
 {
     [TestClass]
     public class TestPrimaApp {
-        /// <summary>
-        /// Test Auto.Accendi
-        /// </summary>
+        #region "Test Turn ON"
         [TestMethod]
         public void testTurnON() {
             prima_app.Auto automobile = new prima_app.Auto();
@@ -17,14 +15,12 @@ namespace TestAuto
                 throw new Exception("");
             }
         }
+        #endregion
 
+        #region "Test Turn Without Fuel"
         // --------------------------------------------------------------------------------------------------------
-
-        /// <summary>
-        /// Test Auto.Accendi
-        /// </summary>
         [TestMethod]
-        public void testTurnWithouFuel()
+        public void testTurnWithoutFuel()
         {
             prima_app.Auto automobile = new prima_app.Auto("", "", prima_app.Auto.Motore.Elettrico, "", 0, 0);
 
@@ -39,5 +35,6 @@ namespace TestAuto
                 throw new Exception("");
             }
         }
+        #endregion
     }
 }
