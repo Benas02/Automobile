@@ -89,6 +89,40 @@ namespace prima_app
             
         }
 
+        public void rallenta(int value) {
+            string result;
+
+            if (value > 0) {
+                //this.livelloVelocita -= value;
+
+                if (accesa == true)
+                {
+                    Console.WriteLine("Accendere la macchina");
+
+                    if (livelloVelocita > 0)
+                    {
+                        this.livelloVelocita -= value;
+
+                        if (livelloVelocita < 0)
+                        {
+                            this.livelloVelocita = 0;
+                        }
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Pronto per franare");
+                    }
+                }
+                else
+                    {
+                    Console.WriteLine("Macchina spenta"); 
+                    }
+                
+            }
+            
+        }
+
         #endregion
 
         #region "Stampa Descrizione"
