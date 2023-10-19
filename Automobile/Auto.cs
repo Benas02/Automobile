@@ -24,12 +24,12 @@ namespace prima_app
         public Motore tipoMotore;
         public string? colore;
 
-        private int livelloMaxCarburante;
-        public int livelloCarburante;
+        public int livelloMaxCarburante { get; private set; }
+        public int livelloCarburante { get; private set; }
         private bool accesa;
         
         public int livelloVelocita { get; private set; }
-        private int livelloMaxVelocita;
+        public int livelloMaxVelocita { get; private set; }
         #endregion
 
         #region "Costruttore"

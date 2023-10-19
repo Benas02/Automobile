@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project1", "Project1\Project1.csproj", "{F61CC8FA-8FAB-47E5-B937-8DBAAB96630F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestCar", "TestCar\TestCar.csproj", "{CA4A9F24-1098-4E96-840A-1DCB3CB2A284}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormCar", "FormCar\FormCar.csproj", "{A9379D22-DC7A-44AF-BE3B-A27975FA8AB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F61CC8FA-8FAB-47E5-B937-8DBAAB96630F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F61CC8FA-8FAB-47E5-B937-8DBAAB96630F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F61CC8FA-8FAB-47E5-B937-8DBAAB96630F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F61CC8FA-8FAB-47E5-B937-8DBAAB96630F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA4A9F24-1098-4E96-840A-1DCB3CB2A284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA4A9F24-1098-4E96-840A-1DCB3CB2A284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA4A9F24-1098-4E96-840A-1DCB3CB2A284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA4A9F24-1098-4E96-840A-1DCB3CB2A284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9379D22-DC7A-44AF-BE3B-A27975FA8AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9379D22-DC7A-44AF-BE3B-A27975FA8AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9379D22-DC7A-44AF-BE3B-A27975FA8AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9379D22-DC7A-44AF-BE3B-A27975FA8AB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {939DDA49-BE9C-45EE-81E3-B89DA197ECA8}
+	EndGlobalSection
+EndGlobal

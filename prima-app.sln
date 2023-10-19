@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAuto", "TestAuto\TestAu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Automobile", "Automobile\Automobile.csproj", "{5D3EF64A-4B25-4075-B78E-FE3E08D715EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoFormApp", "AutoFormApp\AutoFormApp.csproj", "{3FD43B96-12A1-4B99-A118-4A2572F7DA49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5D3EF64A-4B25-4075-B78E-FE3E08D715EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D3EF64A-4B25-4075-B78E-FE3E08D715EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D3EF64A-4B25-4075-B78E-FE3E08D715EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FD43B96-12A1-4B99-A118-4A2572F7DA49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FD43B96-12A1-4B99-A118-4A2572F7DA49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FD43B96-12A1-4B99-A118-4A2572F7DA49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FD43B96-12A1-4B99-A118-4A2572F7DA49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
