@@ -37,13 +37,18 @@
             linea = new Panel();
             pictureON = new PictureBox();
             pictureOFF = new PictureBox();
-            pictureBox1 = new PictureBox();
+            contachilometri = new PictureBox();
             KM = new ProgressBar();
             kmS = new Label();
             kmD = new Label();
+            carburante = new ProgressBar();
+            lS = new Label();
+            lD = new Label();
+            valoreCarburante = new Label();
+            valoreVelocita = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureON).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureOFF).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)contachilometri).BeginInit();
             SuspendLayout();
             // 
             // powerOn
@@ -70,6 +75,7 @@
             refueling.TabIndex = 3;
             refueling.Text = "REFUELING";
             refueling.UseVisualStyleBackColor = false;
+            refueling.Click += refueling_Click;
             // 
             // speedUp
             // 
@@ -82,6 +88,7 @@
             speedUp.TabIndex = 4;
             speedUp.Text = "SPEED UP";
             speedUp.UseVisualStyleBackColor = false;
+            speedUp.Click += speedUp_Click;
             // 
             // slowDown
             // 
@@ -94,6 +101,7 @@
             slowDown.TabIndex = 5;
             slowDown.Text = "SLOW DOWN";
             slowDown.UseVisualStyleBackColor = false;
+            slowDown.Click += slowDown_Click;
             // 
             // powerOff
             // 
@@ -119,6 +127,7 @@
             status.TabIndex = 7;
             status.Text = "STATUS";
             status.UseVisualStyleBackColor = false;
+            status.Click += status_Click;
             // 
             // linea
             // 
@@ -134,7 +143,7 @@
             pictureON.BackgroundImageLayout = ImageLayout.Zoom;
             pictureON.Location = new Point(21, 128);
             pictureON.Name = "pictureON";
-            pictureON.Size = new Size(307, 270);
+            pictureON.Size = new Size(307, 236);
             pictureON.TabIndex = 9;
             pictureON.TabStop = false;
             // 
@@ -144,20 +153,20 @@
             pictureOFF.BackgroundImageLayout = ImageLayout.Zoom;
             pictureOFF.Location = new Point(21, 128);
             pictureOFF.Name = "pictureOFF";
-            pictureOFF.Size = new Size(307, 270);
+            pictureOFF.Size = new Size(307, 236);
             pictureOFF.TabIndex = 10;
             pictureOFF.TabStop = false;
             // 
-            // pictureBox1
+            // contachilometri
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImage = Properties.Resources.KM1;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(371, 128);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(431, 236);
-            pictureBox1.TabIndex = 11;
-            pictureBox1.TabStop = false;
+            contachilometri.BackColor = Color.Transparent;
+            contachilometri.BackgroundImage = Properties.Resources.KM1;
+            contachilometri.BackgroundImageLayout = ImageLayout.Zoom;
+            contachilometri.Location = new Point(371, 128);
+            contachilometri.Name = "contachilometri";
+            contachilometri.Size = new Size(431, 236);
+            contachilometri.TabIndex = 11;
+            contachilometri.TabStop = false;
             // 
             // KM
             // 
@@ -169,31 +178,81 @@
             // kmS
             // 
             kmS.AutoSize = true;
-            kmS.Location = new Point(404, 430);
+            kmS.Location = new Point(390, 430);
             kmS.Name = "kmS";
-            kmS.Size = new Size(17, 20);
+            kmS.Size = new Size(19, 20);
             kmS.TabIndex = 13;
-            kmS.Text = "└";
+            kmS.Text = "A";
             // 
             // kmD
             // 
-            kmD.Location = new Point(725, 429);
+            kmD.Location = new Point(673, 430);
             kmD.Name = "kmD";
-            kmD.Size = new Size(55, 20);
+            kmD.Size = new Size(129, 20);
             kmD.TabIndex = 14;
-            kmD.Text = "┘";
+            kmD.Text = "A";
             kmD.TextAlign = ContentAlignment.TopRight;
+            // 
+            // carburante
+            // 
+            carburante.Location = new Point(33, 388);
+            carburante.Name = "carburante";
+            carburante.Size = new Size(272, 39);
+            carburante.TabIndex = 15;
+            // 
+            // lS
+            // 
+            lS.AutoSize = true;
+            lS.Location = new Point(23, 430);
+            lS.Name = "lS";
+            lS.Size = new Size(17, 20);
+            lS.TabIndex = 16;
+            lS.Text = "0";
+            // 
+            // lD
+            // 
+            lD.AutoSize = true;
+            lD.Location = new Point(274, 430);
+            lD.Name = "lD";
+            lD.Size = new Size(17, 20);
+            lD.TabIndex = 17;
+            lD.Text = "0";
+            // 
+            // valoreCarburante
+            // 
+            valoreCarburante.AutoSize = true;
+            valoreCarburante.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            valoreCarburante.Location = new Point(148, 397);
+            valoreCarburante.Name = "valoreCarburante";
+            valoreCarburante.Size = new Size(36, 20);
+            valoreCarburante.TabIndex = 18;
+            valoreCarburante.Text = "999";
+            // 
+            // valoreVelocita
+            // 
+            valoreVelocita.AutoSize = true;
+            valoreVelocita.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            valoreVelocita.Location = new Point(574, 397);
+            valoreVelocita.Name = "valoreVelocita";
+            valoreVelocita.Size = new Size(36, 20);
+            valoreVelocita.TabIndex = 19;
+            valoreVelocita.Text = "999";
             // 
             // AutoFormApp
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(833, 458);
+            ClientSize = new Size(833, 464);
+            Controls.Add(valoreVelocita);
+            Controls.Add(valoreCarburante);
+            Controls.Add(lD);
+            Controls.Add(lS);
+            Controls.Add(carburante);
             Controls.Add(kmD);
             Controls.Add(kmS);
             Controls.Add(KM);
-            Controls.Add(pictureBox1);
+            Controls.Add(contachilometri);
             Controls.Add(pictureOFF);
             Controls.Add(pictureON);
             Controls.Add(linea);
@@ -208,7 +267,7 @@
             Load += AutoFormApp_Load;
             ((System.ComponentModel.ISupportInitialize)pictureON).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureOFF).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)contachilometri).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -223,9 +282,14 @@
         private Panel linea;
         private PictureBox pictureON;
         private PictureBox pictureOFF;
-        private PictureBox pictureBox1;
+        private PictureBox contachilometri;
         private ProgressBar KM;
         private Label kmS;
         private Label kmD;
+        private ProgressBar carburante;
+        private Label lS;
+        private Label lD;
+        private Label valoreCarburante;
+        private Label valoreVelocita;
     }
 }
