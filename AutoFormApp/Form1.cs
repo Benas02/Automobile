@@ -35,7 +35,7 @@ namespace AutoFormApp
 
         #region " Power On "
         private void powerON_Click(object sender, EventArgs e)
-        {           
+        {
             automobile.accendi();
 
             if (automobile.isAccesa() == true)
@@ -65,7 +65,7 @@ namespace AutoFormApp
 
                 this.aggiornaCarburante();
                 this.aggiornaVelocita();
-            }           
+            }
         }
         #endregion
 
@@ -153,7 +153,7 @@ namespace AutoFormApp
         {
             if (automobile.isAccesa() == true)
             {
-                automobile.accelera(2);
+                automobile.accelera(10);
                 this.aggiornaVelocita();
                 this.aggiornaCarburante();
             }
@@ -187,5 +187,14 @@ namespace AutoFormApp
             status.ShowDialog();
         }
         #endregion
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (automobile.isAccesa() == true) {
+                automobile.decelera(1);
+                this.aggiornaVelocita();
+            }
+            
+        }
     }
 }

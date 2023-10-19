@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             powerOn = new Button();
             refueling = new Button();
             speedUp = new Button();
@@ -46,6 +47,7 @@
             lD = new Label();
             valoreCarburante = new Label();
             valoreVelocita = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureON).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureOFF).BeginInit();
             ((System.ComponentModel.ISupportInitialize)contachilometri).BeginInit();
@@ -238,6 +240,12 @@
             valoreVelocita.TabIndex = 19;
             valoreVelocita.Text = "999";
             // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
+            // 
             // AutoFormApp
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -291,5 +299,6 @@
         private Label lD;
         private Label valoreCarburante;
         private Label valoreVelocita;
+        private System.Windows.Forms.Timer timer1;
     }
 }
