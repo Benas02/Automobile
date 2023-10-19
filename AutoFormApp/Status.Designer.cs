@@ -42,7 +42,7 @@
             // 
             pictureBox1.BackgroundImage = Properties.Resources.tesla;
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(58, 193);
+            pictureBox1.Location = new Point(63, 176);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(676, 271);
             pictureBox1.TabIndex = 0;
@@ -51,6 +51,7 @@
             // marcaVeicolo
             // 
             marcaVeicolo.BackColor = Color.Gainsboro;
+            marcaVeicolo.Enabled = false;
             marcaVeicolo.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             marcaVeicolo.ForeColor = SystemColors.ControlDarkDark;
             marcaVeicolo.Location = new Point(12, 12);
@@ -63,6 +64,7 @@
             // motoreVeicolo
             // 
             motoreVeicolo.BackColor = Color.Gainsboro;
+            motoreVeicolo.Enabled = false;
             motoreVeicolo.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             motoreVeicolo.ForeColor = SystemColors.ControlDarkDark;
             motoreVeicolo.Location = new Point(544, 12);
@@ -75,6 +77,7 @@
             // modelloVeicolo
             // 
             modelloVeicolo.BackColor = Color.Gainsboro;
+            modelloVeicolo.Enabled = false;
             modelloVeicolo.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             modelloVeicolo.ForeColor = SystemColors.ControlDarkDark;
             modelloVeicolo.Location = new Point(278, 12);
@@ -87,6 +90,7 @@
             // coloreVeicolo
             // 
             coloreVeicolo.BackColor = Color.Gainsboro;
+            coloreVeicolo.Enabled = false;
             coloreVeicolo.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             coloreVeicolo.ForeColor = SystemColors.ControlDarkDark;
             coloreVeicolo.Location = new Point(12, 100);
@@ -99,6 +103,7 @@
             // carburanteVeicolo
             // 
             carburanteVeicolo.BackColor = Color.Gainsboro;
+            carburanteVeicolo.Enabled = false;
             carburanteVeicolo.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             carburanteVeicolo.ForeColor = SystemColors.ControlDarkDark;
             carburanteVeicolo.Location = new Point(278, 100);
@@ -111,6 +116,7 @@
             // velocitaVeicolo
             // 
             velocitaVeicolo.BackColor = Color.Gainsboro;
+            velocitaVeicolo.Enabled = false;
             velocitaVeicolo.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             velocitaVeicolo.ForeColor = SystemColors.ControlDarkDark;
             velocitaVeicolo.Location = new Point(544, 100);

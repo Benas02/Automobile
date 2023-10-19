@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace AutoFormApp
 {
     public partial class AutoFormApp : Form
@@ -181,7 +183,8 @@ namespace AutoFormApp
         #region " Status "
         private void status_Click(object sender, EventArgs e)
         {
-
+            Status status = new Status(this.automobile);
+            status.ShowDialog();
         }
         #endregion
     }
