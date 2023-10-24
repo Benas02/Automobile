@@ -164,9 +164,9 @@
             contachilometri.BackColor = Color.Transparent;
             contachilometri.BackgroundImage = Properties.Resources.KM1;
             contachilometri.BackgroundImageLayout = ImageLayout.Zoom;
-            contachilometri.Location = new Point(371, 128);
+            contachilometri.Location = new Point(385, 128);
             contachilometri.Name = "contachilometri";
-            contachilometri.Size = new Size(431, 236);
+            contachilometri.Size = new Size(417, 236);
             contachilometri.TabIndex = 11;
             contachilometri.TabStop = false;
             // 
@@ -243,7 +243,7 @@
             // timer1
             // 
             timer1.Enabled = true;
-            timer1.Interval = 1000;
+            timer1.Interval = 1500;
             timer1.Tick += timer1_Tick;
             // 
             // AutoFormApp

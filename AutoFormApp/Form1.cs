@@ -143,7 +143,12 @@ namespace AutoFormApp
         #region " Refueling "
         private void refueling_Click(object sender, EventArgs e)
         {
-            automobile.rifornisci(10);
+            Refueling refueling = new Refueling();
+            refueling.ShowDialog();
+
+            automobile.rifornisci(refueling.value);
+
+            //automobile.rifornisci(10);
             this.aggiornaCarburante();
         }
         #endregion
@@ -190,11 +195,12 @@ namespace AutoFormApp
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (automobile.isAccesa() == true) {
+            if (automobile.isAccesa() == true)
+            {
                 automobile.decelera(1);
                 this.aggiornaVelocita();
             }
-            
+
         }
     }
 }
