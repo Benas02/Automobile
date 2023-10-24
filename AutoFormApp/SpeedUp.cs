@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace AutoFormApp
 {
-    public partial class Refueling : Form
+    public partial class SpeedUp : Form
     {
         public int value;
-        public Refueling()
+        public SpeedUp()
         {
             InitializeComponent();
         }
 
-        private void rifornimento_Click(object sender, EventArgs e)
+        private void btnSpeedUp_Click(object sender, EventArgs e)
         {
-            string textboxValue = this.textRifornimento.Text;
+            string textboxValue = this.textSpeedUp.Text;
             this.value = Int32.Parse(textboxValue);
             this.Close();
         }

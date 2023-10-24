@@ -158,7 +158,11 @@ namespace AutoFormApp
         {
             if (automobile.isAccesa() == true)
             {
-                automobile.accelera(10);
+                SpeedUp speedUp = new SpeedUp();
+                speedUp.ShowDialog();
+
+
+                automobile.accelera(speedUp.value);
                 this.aggiornaVelocita();
                 this.aggiornaCarburante();
             }
@@ -166,6 +170,16 @@ namespace AutoFormApp
             {
                 //  Messaggio Errore
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (automobile.isAccesa() == true)
+            {
+                automobile.decelera(1);
+                this.aggiornaVelocita();
+            }
+
         }
         #endregion
 
@@ -192,15 +206,6 @@ namespace AutoFormApp
             status.ShowDialog();
         }
         #endregion
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (automobile.isAccesa() == true)
-            {
-                automobile.decelera(1);
-                this.aggiornaVelocita();
-            }
-
-        }
+        
     }
 }
