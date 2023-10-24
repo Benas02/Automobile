@@ -41,7 +41,7 @@
             labelRifornimento.Name = "labelRifornimento";
             labelRifornimento.Size = new Size(329, 25);
             labelRifornimento.TabIndex = 7;
-            labelRifornimento.Text = "How much do you want to speed up ?";
+            labelRifornimento.Text = "How much do you want to Speed Up ?";
             labelRifornimento.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnSpeedUp

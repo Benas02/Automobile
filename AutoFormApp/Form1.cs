@@ -188,7 +188,10 @@ namespace AutoFormApp
         {
             if (automobile.isAccesa() == true)
             {
-                automobile.decelera(2);
+                SlowDown slowDown = new SlowDown();
+                slowDown.ShowDialog();
+
+                automobile.decelera(slowDown.value);
                 this.aggiornaVelocita();
                 this.aggiornaCarburante();
             }

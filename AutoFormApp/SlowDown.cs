@@ -12,9 +12,17 @@ namespace AutoFormApp
 {
     public partial class SlowDown : Form
     {
+        public int value;
         public SlowDown()
         {
             InitializeComponent();
+        }
+
+        private void btnSlowDown_Click(object sender, EventArgs e)
+        {
+            string textboxValue = this.textSlowDown.Text;
+            this.value = Int32.Parse(textboxValue);
+            this.Close();
         }
     }
 }

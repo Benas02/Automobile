@@ -28,12 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "SlowDown";
+            labelRifornimento = new Label();
+            textSlowDown = new TextBox();
+            btnSlowDown = new Button();
+            SuspendLayout();
+            // 
+            // labelRifornimento
+            // 
+            labelRifornimento.AutoSize = true;
+            labelRifornimento.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            labelRifornimento.Location = new Point(35, 9);
+            labelRifornimento.Name = "labelRifornimento";
+            labelRifornimento.Size = new Size(346, 25);
+            labelRifornimento.TabIndex = 8;
+            labelRifornimento.Text = "How much do you want to Slow Down ?";
+            labelRifornimento.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // textSlowDown
+            // 
+            textSlowDown.Location = new Point(148, 72);
+            textSlowDown.Name = "textSlowDown";
+            textSlowDown.Size = new Size(98, 27);
+            textSlowDown.TabIndex = 10;
+            textSlowDown.TextAlign = HorizontalAlignment.Center;
+            // 
+            // btnSlowDown
+            // 
+            btnSlowDown.BackColor = Color.Gainsboro;
+            btnSlowDown.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSlowDown.ForeColor = SystemColors.ControlDarkDark;
+            btnSlowDown.Location = new Point(119, 134);
+            btnSlowDown.Name = "btnSlowDown";
+            btnSlowDown.Size = new Size(150, 60);
+            btnSlowDown.TabIndex = 11;
+            btnSlowDown.Text = "SLOW DOWN";
+            btnSlowDown.UseVisualStyleBackColor = false;
+            btnSlowDown.Click += btnSlowDown_Click;
+            // 
+            // SlowDown
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.Strada;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(397, 218);
+            Controls.Add(btnSlowDown);
+            Controls.Add(textSlowDown);
+            Controls.Add(labelRifornimento);
+            Name = "SlowDown";
+            Text = "SlowDown";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label labelRifornimento;
+        private TextBox textSlowDown;
+        private Button btnSlowDown;
     }
 }
